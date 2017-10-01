@@ -1,0 +1,9 @@
+{
+  "name": "Evosite",
+  "description": "Evosite",
+  "image": "heroku/python",
+  "repository": "https://gitlab.com/theSage21/evo-site",
+  "keywords": ["python", "flask" ],
+  "environments": {
+    }
+}
