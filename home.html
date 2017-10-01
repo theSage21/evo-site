@@ -21,10 +21,15 @@
                 color: #{{ bt3c }};
             }
         </style>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
     </head>
     <body>
         <h1>Evo Site</h1>
-        <p>Try clicking on something. The site evolves with the traffic it sees and optimizes itself to direct every user to one thing</p>
+        <b id='star_button'>Go ahead. Star the repo if you liked it!
+            <a class="github-button" href="https://github.com/theSage21/evo-site" data-icon="octicon-star" data-size="large" aria-label="Star theSage21/evo-site on GitHub">Star</a></b>
+        <p>Try clicking on something. The site evolves with the traffic it sees and optimizes itself to direct every user to one thing (which the desigerns deem worthy). In this demo you have to click on the right bit of text. The site adapts over time to persuade you to click on only a single bit of text. I expect it to lead to somme interesting things.</p>
+        <p> Code is <a href="https://github.com/theSage21/evo-site"> on Github</a><p>
         <hr>
 
         <p class='section1'>
@@ -42,10 +47,14 @@
         <script>
             var ident = "{{ident}}";
             var target = document.getElementById("target_click");
+            var star = document.getElementById("star_button");
+            star.style.display = 'none';
             target.onclick = function(){
                 var xhttp = new XMLHttpRequest();
                 xhttp.open("GET", "/mark-hit/"+ident, true);
                 xhttp.send();
+                star.style.display = 'block';
+
             }; // on click
         </script>
     </body>
