@@ -54,7 +54,7 @@ def crossover(c1, c2):
 
 
 class GA:
-    def __init__(self, psize=10, minhits=10):
+    def __init__(self, psize=10, minhits=1):
         """populaiton size, minimum hits per gene before evolving next
         population"""
         self.psize = psize
